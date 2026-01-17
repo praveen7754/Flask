@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table border="1">
+        <tr>
+
+            <th>ID</th>
+            <th>NAME</th>
+            <th>AGE</th>
+            <th>UPDATE</th>
+            <th>DELETE</th>
+        </tr>
+        
+        {% for i in data %}
+        <!-- {{i}} -->
+
+        <tr>
+            <td>{{ i[0] }}</td>
+            <td>{{ i[1] }}</td>
+            <td>{{ i[2] }}</td>
+            <td><button><a href="/stud_update/{{i[0]}}">update</a></button></td>
+            <td><button><a href="/stud_delete/{{i[0]}}">delete</a></button></td>
+
+
+   
+        </tr>
+        {% endfor %}
+
+
+
+    </table>
+    <button><a href="/add">add details</a></button>
+
+
+</body>
+</html>
